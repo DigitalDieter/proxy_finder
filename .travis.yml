@@ -3,6 +3,7 @@ language: python
 before_script:
   - sleep 3
 python:
+  - "2.7"
   - "3.6"
 install:
   - pip install -r requirements.txt
