@@ -9,5 +9,5 @@ python:
 install:
   - pip install -r requirements.txt
   - pip install pylint
-
+script: pytest
 
