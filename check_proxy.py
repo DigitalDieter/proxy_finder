@@ -1,6 +1,4 @@
-import time
 import requests
-import logging
 import pandas as pd
 from fake_useragent import UserAgent
 
@@ -23,27 +21,25 @@ url = "http://example.com"
 ua = UserAgent()
 print(ua.random)
 
-headers = {
-    'User-Agent': ua.random,
-}
-
+headers = {'User-Agent': ua.random}
 
 for index, row in df[df['Response'] == 0].iterrows():
-    if (row["Status"] == 'untested'):
+    if row["Status"] == 'untested':
         try:
             proxy = (row["IP_PO"])
 
             response = requests.get(
                 url, proxies={"http": proxy, "https": proxy}, timeout=(1, 5), headers=headers)
-            if (response.status_code == 200):
+            if response.status_code == 200:
 
                 # Response time in ms
-                response_time = requests.get(url, proxies={
-                                             "http": proxy, "https": proxy}, timeout=(1, 5)).elapsed.total_seconds()
+                response_time = requests.get(url, proxies={"http": proxy, "https": proxy},
+                                                 timeout=(1, 5)).elapsed.total_seconds()
 
                 # Add test results to df
                 proxies = proxies.append(
-                    {'IP_PO': proxy, 'Status': 'alive', 'Response': response_time, 'Proto': 'https'}, ignore_index=True)
+                    {'IP_PO': proxy, 'Status': 'alive', 'Response': response_time,
+                     'Proto': 'https'}, ignore_index=True)
 
                 print(index, proxy, "OK")
             else:
@@ -52,6 +48,5 @@ for index, row in df[df['Response'] == 0].iterrows():
 
         except Exception as x:
             print(index, proxy, x.__class__.__name__)
-            pass
 else:
     print("Test finished")
