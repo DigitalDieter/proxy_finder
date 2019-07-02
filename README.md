@@ -2,6 +2,9 @@
 
 [![Build Status][travis-image]][travis-url]
 
+[![Build Status][travis-image]][travis-url]
+
+
 These python scripts download and check https, socks5, socks4 proxy server.
 
 ![](header.png)
@@ -46,9 +49,6 @@ For check proxys
 ```bash
 python check_proxy.py -n 50
 ```
-<<<<<<< HEAD
-=======
 
->>>>>>> 7eab3d85159f4e8cae43de74bdad4872f8c8391b
 
 
