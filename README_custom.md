@@ -1,4 +1,5 @@
 # proxy finder
+> Short blurb about what your product does.
 
 [![Build Status][travis-image]][travis-url]
 
@@ -17,31 +18,19 @@ python -m pip install -r requirements.txt
 Windows:
 
 ```bash
-python get_socks5.py -h
+python find_sa
+edit autoexec.bat
 ```
 
 ## Usage example
-Default server = 100
+
 
 For downloading proxy server execute the following command.
 
 
-Download and save 50 https proxy-server ./source folder 
-```bash
-python get_https.py -n 50
-```
+A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
-Download and save 50 socks5 proxy-server ./source folder 
-```bash
-python get_socks5.py -n 50
-```
-
-Download and save 50 socks4 proxy-server ./source folder 
-```bash
-python get_socks4.py -n 50
-```
-
-
+_For more examples and usage, please refer to the [Wiki][wiki]._
 
 
 

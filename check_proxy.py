@@ -3,7 +3,8 @@ import pandas as pd
 from fake_useragent import UserAgent
 
 # Read csv file:
-csv_path = '/path/to/file.csv'
+#csv_path = '/path/to/file.csv'
+csv_path = 'source/100_https_proxies.txt'
 
 # Create proxies df
 proxies = pd.DataFrame(
@@ -19,7 +20,6 @@ url = "http://example.com"
 
 # define useragent
 ua = UserAgent()
-print(ua.random)
 
 headers = {'User-Agent': ua.random}
 
