@@ -1,9 +1,6 @@
+[![Build Status](https://travis-ci.org/DigitalDieter/proxy_finder.svg?branch=master)](https://travis-ci.org/DigitalDieter/proxy_finder)
+
 # proxy finder
-
-[![Build Status][travis-image]][travis-url]
-
-[![Build Status][travis-image]][travis-url]
-
 
 These python scripts download and check https, socks5, socks4 proxy server.
 
