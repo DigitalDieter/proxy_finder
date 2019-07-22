@@ -30,6 +30,6 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
-script:
-  - python check_system_setup.py
-  - python get_https.py -n 50
+- script:
+    python check_system_setup.py
+    python get_https.py -n 50
