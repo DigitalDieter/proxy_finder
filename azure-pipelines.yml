@@ -31,3 +31,4 @@ steps:
 - script:
     python check_system_setup.py
     python get_https.py -n 50
+    python get_socks5.py -n 50
