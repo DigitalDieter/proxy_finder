@@ -41,8 +41,7 @@ Download and save 50 socks4 proxy-server ./source folder
 python get_socks4.py -n 50
 ```
 
-For check proxys
-
+For checking proxies
 ```bash
 python check_proxy.py -n 50
 ```
