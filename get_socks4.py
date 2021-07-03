@@ -2,6 +2,9 @@ import asyncio
 import argparse
 from proxybroker import Broker
 
+import warnings
+warnings.filterwarnings("ignore")
+
 parser = argparse.ArgumentParser(description='Find Proxy Server')
 parser.add_argument('-n', '--n_results', type=int, default=100,
                     help='number of proxy server')
@@ -20,7 +23,7 @@ async def save(proxies, filename):
             if proxy is None:
                 break
             # proto = 'socks4' if 'SOCKS4' in proxy.types
-            row = '%s:%d,\n' % (proxy.host, proxy.port)
+            row = '%s:%d \n' % (proxy.host, proxy.port)
             f.write(row)
             count = count + 1
             print(count, row)
