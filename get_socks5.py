@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser(description='Find Proxy Server')
-parser.add_argument('-n', '--n_results', type=int, default=50,
+parser.add_argument('-n', '--n_results', type=int, default=51,
                     help='number of proxy server')
 
 args = parser.parse_args()
